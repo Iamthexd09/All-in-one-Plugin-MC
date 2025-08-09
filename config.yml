@@ -1,0 +1,126 @@
+plugin:
+  name: "All-in-one Plugin"
+  version: "1.0.0"
+  
+database:
+  type: "sqlite"
+  file: "database.db"
+
+economy:
+  starting_balance: 5000.0
+  currency_symbol: "$"
+
+homes:
+  max_homes_per_player: 5
+
+warps:
+  allow_player_warps: true
+
+rtp:
+  min_distance: 1000
+  max_distance: 5000
+  max_attempts: 10
+
+kits:
+  starter:
+    permission: "allinone.kit.starter"
+    cooldown: 86400  # 24 horas en segundos
+    items:
+      - "WOODEN_SWORD:1"
+      - "WOODEN_PICKAXE:1"
+      - "BREAD:10"
+      - "LEATHER_HELMET:1"
+      - "LEATHER_CHESTPLATE:1"
+      - "LEATHER_LEGGINGS:1"
+      - "LEATHER_BOOTS:1"
+      
+  vip:
+    permission: "allinone.kit.vip"
+    cooldown: 43200  # 12 horas
+    items:
+      - "IRON_SWORD:1"
+      - "IRON_PICKAXE:1"
+      - "COOKED_BEEF:16"
+      - "IRON_HELMET:1"
+      - "IRON_CHESTPLATE:1"
+      - "IRON_LEGGINGS:1"
+      - "IRON_BOOTS:1"
+
+ranks:
+  default_rank: "Usuario"
+  ranks:
+    Usuario:
+      prefix: "&7[Usuario] "
+      suffix: ""
+    VIP:
+      prefix: "&a[VIP] "
+      suffix: ""
+    Premium:
+      prefix: "&6[Premium] "
+      suffix: ""
+    Admin:
+      prefix: "&c[Admin] "
+      suffix: ""
+
+protection:
+  stones:
+    coal_ore:
+      type: "ULTIMATE"
+      radius: 11
+      cost: 30000.0
+    diamond_block:
+      type: "PREMIUM"
+      radius: 8
+      cost: 15000.0
+    emerald_block:
+      type: "VIP"
+      radius: 6
+      cost: 8000.0
+    gold_block:
+      type: "GOLD"
+      radius: 5
+      cost: 3000.0
+    iron_block:
+      type: "BASIC"
+      radius: 4
+      cost: 1000.0
+
+shop:
+  enabled: true
+  items:
+    stone:
+      buy_price: 5
+      sell_price: 2
+    cobblestone:
+      buy_price: 3
+      sell_price: 1
+    dirt:
+      buy_price: 2
+      sell_price: 1
+
+auction:
+  max_auction_time: 604800  # 7 días en segundos
+  min_bid_increment: 10.0
+
+crates:
+  basic:
+    price: 100
+  premium:
+    price: 500
+  legendary:
+    price: 2000
+
+backpack:
+  default_size: 27
+  max_size: 54
+
+messages:
+  no_permission: "&cNo tienes permisos para usar este comando!"
+  player_only: "&cSolo los jugadores pueden usar este comando!"
+  invalid_player: "&cEl jugador no está en línea!"
+  teleported: "&aHas sido teletransportado!"
+  home_set: "&aCasa establecida correctamente!"
+  home_not_found: "&cNo se encontró la casa especificada!"
+  insufficient_funds: "&cNo tienes suficiente dinero!"
+  protection_created: "&aPiedra protectora activada!"
+  protection_exists: "&cYa existe una protección en esta área!"

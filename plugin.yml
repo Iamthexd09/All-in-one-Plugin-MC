@@ -1,0 +1,141 @@
+name: AllInOnePlugin
+version: 1.0.0
+description: Plugin todo en uno con teletransporte, economía, shop, subastas y más
+author: Becmxx09, desarrollado en Bolt.new
+main: com.allinone.AllInOnePlugin
+api-version: 1.19
+softdepend: [Vault, PlaceholderAPI]
+
+commands:
+  tpa:
+    description: Solicitar teletransporte a un jugador
+    usage: /tpa <jugador>
+  tpaccept:
+    description: Aceptar solicitud de teletransporte
+    usage: /tpaccept [jugador]
+  tpacancel:
+    description: Cancelar solicitud de teletransporte
+    usage: /tpacancel [jugador]
+  sethome:
+    description: Establecer casa
+    usage: /sethome [nombre]
+  home:
+    description: Ir a casa
+    usage: /home [nombre]
+  shop:
+    description: Abrir tienda
+    usage: /shop
+  auction:
+    description: Casa de subastas
+    usage: /ah [sell <precio> [cantidad]]
+    aliases: [ah, auctionhouse, auch]
+  crate:
+    description: Sistema de crates
+    usage: /crate <tipo>
+  backpack:
+    description: Abrir mochila
+    usage: /backpack
+  rank:
+    description: Comandos de rangos
+    usage: /rank <set/remove> <jugador> <rango>
+  rtp:
+    description: Teletransporte aleatorio
+    usage: /rtp
+  kit:
+    description: Kits
+    usage: /kit <nombre>
+  warp:
+    description: Warps
+    usage: /warp <nombre>
+  setwarp:
+    description: Crear warp
+    usage: /setwarp <nombre>
+  nick:
+    description: Cambiar nick
+    usage: /nick <nombre>
+  chatcolor:
+    description: Cambiar color del chat
+    usage: /chatcolor <codigo>
+  money:
+    description: Ver dinero
+    usage: /money
+  pay:
+    description: Pagar a jugador
+    usage: /pay <jugador> <cantidad> (mínimo $10)
+  spawn:
+    description: Ir al spawn
+    usage: /spawn
+  setspawn:
+    description: Establecer spawn
+    usage: /setspawn
+  withdraw:
+    description: Retirar dinero como billete
+    usage: /withdraw <cantidad>
+  npc:
+    description: Comandos de NPCs
+    usage: /npc <crear/eliminar>
+
+permissions:
+  allinone.*:
+    description: Todos los permisos
+    default: op
+  allinone.tpa:
+    description: Solicitar teletransporte
+    default: true
+  allinone.tpaccept:
+    description: Aceptar teletransporte
+    default: true
+  allinone.tpacancel:
+    description: Cancelar teletransporte
+    default: true
+  allinone.home:
+    description: Usar homes
+    default: true
+  allinone.shop:
+    description: Usar tienda
+    default: true
+  allinone.auction:
+    description: Usar casa de subastas
+    default: true
+  allinone.ah:
+    description: Usar casa de subastas
+    default: true
+  allinone.crate:
+    description: Usar crates
+    default: true
+  allinone.backpack:
+    description: Usar mochila
+    default: true
+  allinone.rank:
+    description: Manejar rangos
+    default: op
+  allinone.rtp:
+    description: Usar RTP
+    default: true
+  allinone.kit:
+    description: Usar kits
+    default: true
+  allinone.warp:
+    description: Usar warps
+    default: true
+  allinone.nick:
+    description: Usar nicks
+    default: true
+  allinone.chatcolor:
+    description: Usar colores en chat
+    default: true
+  allinone.economy:
+    description: Usar economía
+    default: true
+  allinone.spawn:
+    description: Usar spawn
+    default: true
+  allinone.setspawn:
+    description: Establecer spawn
+    default: op
+  allinone.withdraw:
+    description: Retirar dinero
+    default: true
+  allinone.npc:
+    description: Manejar NPCs
+    default: op
